@@ -71,7 +71,10 @@ img {
   border-radius: 5px;
   padding: 20px;
 
-  img {
+  .image {
+    background-image: url('../assets/eu.jpg');
+    background-size: cover;
+
     position: relative;
     top: -62px;
 

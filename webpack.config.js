@@ -9,14 +9,22 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'images/[hash][ext][query]',
   },
 
   module: {
     rules: [
       {
-        test: /\.scss$/i,
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset',
+      },
+      {
+        test: /\.(s[ac]|c)ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: '' },
+          },
           'css-loader',
           'postcss-loader',
           'sass-loader',
