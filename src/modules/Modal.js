@@ -11,5 +11,3 @@ export default function Modal(el, button) {
 
   button.addEventListener('click', toggleModal)
 }
-
-Modal()
