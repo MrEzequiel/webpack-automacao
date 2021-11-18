@@ -17,19 +17,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset',
-      },
-      {
         test: /\.(s[ac]|c)ss$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: '' },
-          },
+          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[hash].[ext][query]',
+              outputPath: 'images',
+              publicPath: '',
+              emitFile: true,
+              esModule: false,
+            },
+          },
         ],
       },
       {
