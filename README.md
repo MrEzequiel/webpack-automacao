@@ -37,7 +37,6 @@ Vamos ver a configuração e o que os plugins do webpack fazem:
   + **eslint**: Ele analisa o código em desenvolvimento para encontrar problemas e também manter convenções no seu código. Não esqueça de usar a extensão ESlint no VSCode.
   + **prettier**: Faz o conjunto com o ESlint para seu código ficar ainda mais bonito, o prettier faz a formatação automáticamente ao salvar. 
 
-
 ## 🛠️ Ambiente
 
 As configurações de todos os plugins e dependencias estão especificadas no `webpack.config.js` e também configurações adjacentes na raiz do projeto. Para iniciar o ambiente de desenvolvimento precisa devemos:
