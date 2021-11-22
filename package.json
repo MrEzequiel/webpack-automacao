@@ -13,6 +13,7 @@
   "author": "Ezequiel Soares <mr.ezequiel.soares@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^2.26.0",
     "yarn": "^1.22.17"
   },
   "devDependencies": {
